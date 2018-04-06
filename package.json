@@ -1,0 +1,9 @@
+{
+  "name": "@tslib/vuets-framework",
+  "description": "vue typescript fullstack framework",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:mm-ts-lib/vuets.git",
+  "author": "zhufeng <zhfjyq@163.com>",
+  "license": "MIT"
+}
