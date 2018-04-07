@@ -9,8 +9,8 @@ module.exports = {
   entry: './src/index.ts',
   mode:'production',
   output: {
-    path: path.resolve(__dirname, './dist'),
-    filename: 'build.js'
+    filename: '[name].bundle.js',
+    path: path.resolve(__dirname, './build'),
   },
   module: {
     rules: [
@@ -64,18 +64,13 @@ module.exports = {
       'vue$': 'vue/dist/vue.esm.js'
     }
   },
-  devServer: {
-    historyApiFallback: true,
-    contentBase: path.join(__dirname, "dist"),
-    port: 9000
-  },
   performance: {
     hints: false
   },
   devtool: '#eval-source-map',
   plugins: [
     new HtmlWebPackPlugin({
-      template: "./src/index.html",
+      template: "./static/index.html",
       filename: "index.html"
     }),
     new MiniCssExtractPlugin({
