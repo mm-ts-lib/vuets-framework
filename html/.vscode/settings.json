@@ -1,0 +1,5 @@
+{
+    "jshint.enable": false,
+    "eslint.packageManager": "yarn",
+    "eslint.enable": false
+}
