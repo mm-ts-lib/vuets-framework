@@ -4,5 +4,6 @@
   "version": "1.0.0",
   "repository": "git@github.com:mm-ts-lib/vuets-framework.git",
   "author": "zhufeng <zhfjyq@163.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {}
 }
