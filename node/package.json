@@ -10,13 +10,15 @@
   },
   "devDependencies": {
     "@types/lodash": "^4.14.106",
+    "@types/node-fetch": "^1.6.8",
     "ts-loader": "^4.1.0",
+    "ts-node": "^5.0.1",
     "typescript": "^2.8.1",
+    "uglifyjs-webpack-plugin": "^1.2.4",
     "webpack": "^4.5.0",
     "webpack-cli": "^2.0.14"
   },
   "scripts": {
     "build": "./node_modules/.bin/webpack --mode production",
-    "dev": "./node_modules/.bin/webpack-dev-server --config webpack.config.dev.js --mode development --inline --open --hot"
   }
 }

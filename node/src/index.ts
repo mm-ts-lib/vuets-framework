@@ -1,4 +1,6 @@
 import _ from 'lodash';
 
-console.log('Hello:',_.snakeCase('TestMagicMind'));
+const abc = 10;
+console.log('Hello:',_.snakeCase(`TestMagicMind:${abc}`));
+
 
