@@ -4,7 +4,11 @@ import cmdline from './cmdline';
 import process from 'process';
 import test from './test';
 
-console.log(process.argv,test);
+import debug from 'debug';
+import path from 'path';
+const _d = debug('app:' + path.basename(__filename, '.js'));
+
+_d(process.argv, test);
 
 var app = express()
 
@@ -14,10 +18,10 @@ app.get('/', function (req, res) {
 })
 
 const abc = 10;
-console.log('Hello:',_.snakeCase(`TestMagicMind:${abc}`));
-console.log('cmdline',cmdline);
+_d('Hello:', _.snakeCase(`TestMagicMind:${abc}`));
+_d('cmdline', cmdline);
 
 
-app.listen(cmdline.port,()=>{
-    console.log(`listen on ${cmdline.port} ok`);    
+app.listen(cmdline.port, () => {
+  _d(`listen on ${cmdline.port} ok`);
 });

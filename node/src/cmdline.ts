@@ -1,6 +1,11 @@
 import argv from '@tslib/argv';
 // Automatically import version information, it can also be manually defined
 import pkg = require('../package.json');
+import debug from 'debug';
+import path from 'path';
+const _d = debug('app:' + path.basename(__filename, '.js'));
+
+_d('load cmdline');
 
 /**
  * Export the parsed command line

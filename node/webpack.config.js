@@ -9,7 +9,7 @@ module.exports = {
     entry: path.resolve(__dirname, './src/index.ts'),
     output: {
         // filename: '[name].bundle.js',
-        filename: pkg.name+"."+pkg.version+'.js',
+        filename: pkg.name + "." + pkg.version + '.js',
         path: path.resolve(__dirname, './build'),
     },
     target: 'node',
@@ -23,15 +23,15 @@ module.exports = {
                 /build/,
             ],
             options: {}
-        }, ],
+        },],
     },
     resolve: {
-        extensions: ['.js','.ts','.json'],
+        extensions: ['.js', '.ts', '.json'],
         alias: {
-          '@': path.resolve(__dirname, './src')
+            '@': path.resolve(__dirname, './src')
         }
-      },
-    
+    },
+
     performance: {
         hints: false
     },
@@ -39,10 +39,10 @@ module.exports = {
     plugins: [
         new UglifyJsPlugin({
             sourceMap: true,
-            cache:'.uglify-cache',
-            parallel:true,
+            cache: '.uglify-cache',
+            parallel: true,
             uglifyOptions: {
-                ecma: 6,
+                ecma: 8,
                 warnings: false,
                 parse: {},
                 compress: {},
