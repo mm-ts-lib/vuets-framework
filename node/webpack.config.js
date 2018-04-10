@@ -37,6 +37,8 @@ module.exports = {
     },
     devtool: 'cheap-source-map',
     plugins: [
+        new webpack.NamedModulesPlugin(),
+
         new UglifyJsPlugin({
             sourceMap: true,
             cache: '.uglify-cache',
